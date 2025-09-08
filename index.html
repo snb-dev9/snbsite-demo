@@ -16,6 +16,18 @@
       letter-spacing: 2px; /* Extra spacing */
     }
 
+    /* New styles for individual letters */
+    .letter {
+      display: inline-block; /* Needed so transform works per letter */
+      transition: transform 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .letter:hover {
+      transform: scale(1.5);   /* Makes letter grow */
+      color: #00ffcc;          /* Optional: changes color */
+    }
+
     img {
       display: block;
       margin: 0 auto;
@@ -26,6 +38,13 @@
 </head>
 <body>
   <img src="images/snblogo1.png" alt="SnB">
-  <h1>SnB</h1>
+
+  <!-- Wrap each letter in span -->
+  <h1>
+    <span class="letter">S</span>
+    <span class="letter">n</span>
+    <span class="letter">B</span>
+  </h1>
 </body>
 </html>
+
